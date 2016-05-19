@@ -3,6 +3,8 @@ require 'Nokogiri'
 require 'Pry'
 require 'csv'
 
+# This array defines the city activity listings that will be scraped. Edit this line to define new cities.
+
 city = ["losangeles", "newyork", "sfbay", "chicago", "houston", "philadelphia"]
 
 city.each do |j|
@@ -34,7 +36,9 @@ city.each do |j|
 
         i += 1
     end
-
+    
+    #This section creates the csv file (cityname).csv.
+    
     file_name = "#{j}.csv"
 
     CSV.open(file_name, 'w') do |csv|
